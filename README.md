@@ -109,16 +109,16 @@ python network_monitor.py -f production-hosts.txt -i 30 --timeout 2 -t 60 -o log
 Located in `logs/uptime_log_YYYYMMDD_HHMMSS.csv`:
 ```csv
 timestamp,host,status,response_time_ms,error
-2024-01-15T09:30:00,8.8.8.8,UP,14.2,
-2024-01-15T09:30:01,google.com,UP,23.5,
-2024-01-15T09:30:02,192.168.1.1,DOWN,,Request timed out
+2026-01-15T09:30:00,8.8.8.8,UP,14.2,
+2026-01-15T09:30:01,google.com,UP,23.5,
+2026-01-15T09:30:02,192.168.1.1,DOWN,,Request timed out
 ```
 
 ### JSON Summary Format
 Located in `logs/uptime_summary_YYYYMMDD_HHMMSS.json`:
 ```json
 {
-  "generated_at": "2024-01-15T10:30:00",
+  "generated_at": "2026-01-15T10:30:00",
   "monitoring_duration_minutes": 60,
   "hosts": {
     "8.8.8.8": {
@@ -127,7 +127,7 @@ Located in `logs/uptime_summary_YYYYMMDD_HHMMSS.json`:
       "successful_checks": 60,
       "failed_checks": 0,
       "uptime_percentage": 100.0,
-      "last_check": "2024-01-15T10:30:00",
+      "last_check": "2026-01-15T10:30:00",
       "last_status": "UP",
       "avg_response_ms": 15.3,
       "min_response_ms": 12.1,
@@ -145,12 +145,12 @@ Hosts: 8.8.8.8, google.com, 192.168.1.1
 Interval: 60s | Logs: logs/
 Press Ctrl+C to stop
 
---- Check #1 @ 2024-01-15 09:30:00 ---
+--- Check #1 @ 2026-01-15 09:30:00 ---
 [09:30:00] 8.8.8.8              [UP] 14.2ms
 [09:30:01] google.com           [UP] 23.5ms
 [09:30:02] 192.168.1.1          [DOWN] Request timed out
 
---- Check #2 @ 2024-01-15 09:31:00 ---
+--- Check #2 @ 2026-01-15 09:31:00 ---
 [09:31:00] 8.8.8.8              [UP] 15.1ms
 [09:31:01] google.com           [UP] 24.2ms
 [09:31:02] 192.168.1.1          [DOWN] Request timed out
@@ -160,22 +160,22 @@ Monitoring stopped by user.
 ======================================================================
 NETWORK MONITORING SUMMARY
 ======================================================================
-Generated: 2024-01-15T09:35:00
-Log files: CSV=logs/uptime_log_20240115_093000.csv, JSON=logs/uptime_summary_20240115_093000.json
+Generated: 2026-01-15T09:35:00
+Log files: CSV=logs/uptime_log_20240115_093000.csv, JSON=logs/uptime_summary_20260115_093000.json
 ----------------------------------------------------------------------
 
 Host: 8.8.8.8
-  Status: UP (as of 2024-01-15T09:35:00)
+  Status: UP (as of 2026-01-15T09:35:00)
   Uptime: 100.0% (5/5 checks)
   Avg Response: 14.8ms (min: 12.1ms, max: 18.7ms)
 
 Host: google.com
-  Status: UP (as of 2024-01-15T09:35:01)
+  Status: UP (as of 2026-01-15T09:35:01)
   Uptime: 100.0% (5/5 checks)
   Avg Response: 23.8ms (min: 21.2ms, max: 26.4ms)
 
 Host: 192.168.1.1
-  Status: DOWN (as of 2024-01-15T09:35:02)
+  Status: DOWN (as of 2026-01-15T09:35:02)
   Uptime: 0.0% (0/5 checks)
   Avg Response: N/A
 
